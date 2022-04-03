@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 13:07:00 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 18:01:25 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/03 20:04:39 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ void	sort_4(t_args *args) // have problem in min int
 	}
 	sort_3(args);
 	pa(&args->stack_a, &args->stack_b);
-	
 }
 //--------------------------------------------- sort 5
 void	sort_5(t_args *args)

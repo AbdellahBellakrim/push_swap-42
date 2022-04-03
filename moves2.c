@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:54:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/03/26 19:32:23 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/03 20:13:13 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	top_to_bottom(t_list **stack, char c)
 	first_node->next = NULL;
 	*stack = second_node;
 	if (c == 'a')
-		write(1, "ra\n", 4);
+		write(1, "ra\n", 3);
 	else if (c == 'b')
-		write(1, "rb\n", 4);
+		write(1, "rb\n", 3);
 }
 
 /*--------------------------------*/ //rr
