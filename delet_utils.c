@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   delet_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:49:54 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 17:53:55 by abellakr         ###   ########.fr       */
+/*   Created: 2022/04/03 13:17:51 by abellakr          #+#    #+#             */
+/*   Updated: 2022/04/03 13:22:47 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*---------------------------------*/
-int	main(int ac, char **av)
+
+void	print_function(t_list *stack_a, t_list *stack_b)
 {
-	t_args	args;
+	t_list	*back1;
+	t_list	*back2;
 
-	if (ac == 1)
-		exit(1);
-	args.stack_a = NULL;
-	args.stack_b = NULL;
-	review_args(ac, av, &args);
-	if (check_stored(args.stack_a))
+	back1 = stack_a;
+	back2 = stack_b;
+	printf("\n****************************************\nstack b: \n");
+	while (back2 != NULL)
 	{
-		free_list(args.stack_a);
-		exit(0);
+		printf ("%d\n", back2->content);
+		back2 = back2->next;
 	}
-	else
-		push_swap(&args);
-	print_function(args.stack_a, args.stack_b);
+	printf("\n*****************************************\nstack a: \n");
+	while (back1 != NULL)
+	{
+		printf ("%d\n", back1->content);
+		back1 = back1->next;
+	}	
 }
-

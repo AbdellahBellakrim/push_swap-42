@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:49:54 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 17:53:55 by abellakr         ###   ########.fr       */
+/*   Created: 2022/04/03 14:44:15 by abellakr          #+#    #+#             */
+/*   Updated: 2022/04/03 15:52:14 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*---------------------------------*/
-int	main(int ac, char **av)
+
+int find_min(t_args *args)
 {
-	t_args	args;
+	int min;
+	t_list *backup;
 
-	if (ac == 1)
-		exit(1);
-	args.stack_a = NULL;
-	args.stack_b = NULL;
-	review_args(ac, av, &args);
-	if (check_stored(args.stack_a))
+	backup = args->stack_a;
+	min = backup->content;
+	while(backup->next)
 	{
-		free_list(args.stack_a);
-		exit(0);
+		if(min > backup->next->content)
+			min = backup->next->content;
+		backup = backup->next;
 	}
-	else
-		push_swap(&args);
-	print_function(args.stack_a, args.stack_b);
+	return(min);
 }
-

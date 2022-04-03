@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:50:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 12:50:31 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/03 15:50:34 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,6 @@ int			check_digit(char **tab);
 void		check_repeat(t_list *list, t_args *t);
 void		free_list(t_list *list);
 int			check_stored(t_list *list);
-int			*reverse_tab(int *tab, int len);
-void		find_max(t_args *var, int *tab);
-int			*fill_tab(int i, int len);
-int			*list_to_tab(t_args *var);
 //------------------- swap functions
 void		swap(t_list **stack, char c);
 void		ss(t_list **stack_a, t_list **stack_b);
@@ -50,6 +46,11 @@ void		rrr(t_list **stack_a, t_list **stack_b);
 void		pb(t_list **stack_a, t_list **stack_b);
 void		pa(t_list **stack_a, t_list **stack_b);
 //---------------------------------  sorting algorithm
+void		print_function(t_list *stack_a, t_list *stack_b);	
 void		push_swap(t_args *args);
+void		sort_3(t_args *args);
+int		find_min(t_args *args);
+void		sort_4(t_args *args);
+void		sort_5(t_args *args);
 
 #endif
