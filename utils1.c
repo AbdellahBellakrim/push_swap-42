@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:43:13 by abellakr          #+#    #+#             */
-/*   Updated: 2022/03/26 19:30:50 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:36:38 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,24 +91,23 @@ int	*fill_tab(int i, int len)
 	return (tab);
 }
 
-//-------------------------------- reverse list 2 tab
-int	*list_to_tab(t_args *var)
+//------------------------------------------------------ list to tab
+int	*list_to_tab(t_list *list, int len)
 {
 	int		i;
 	int		*tab;
 	t_list	*back;
 
 	i = 0;
-	back = var->stack_a;
-	tab = (int *)malloc(sizeof(int) * var->list_len + 1);
+	back = list;
+	tab = (int *)malloc(sizeof(int) * len);
 	if (!tab)
 		exit(1);
-	while (i < var->list_len)
+	while (i < len)
 	{
 		tab[i] = back->content;
 		i++;
 		back = back->next;
 	}
-	tab[i] = '\0';
 	return (tab);
 }

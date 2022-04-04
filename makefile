@@ -6,7 +6,7 @@
 #    By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/10 14:50:05 by abellakr          #+#    #+#              #
-#    Updated: 2022/04/03 15:03:50 by abellakr         ###   ########.fr        #
+#    Updated: 2022/04/04 16:06:35 by abellakr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ endef
 export HEADER_PUSH_SWAP
 
 SRC = push_swap.c check_all.c utils1.c store_data.c parsing.c moves1.c \
-		moves2.c moves3.c moves4.c delet_utils.c  algo.c utils2.c
+		moves2.c moves3.c moves4.c delet_utils.c  algo.c utils2.c big_nums.c 
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)

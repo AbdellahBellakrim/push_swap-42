@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:30:24 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 18:00:44 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/04 15:56:32 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	**ft_split(char const *s, char c);
 //structure
 typedef struct s_list
 {
+	int				index;
 	int				content;
 	struct s_list	*next;
 }	t_list;

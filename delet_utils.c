@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 13:17:51 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 13:22:47 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/04 21:52:25 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	print_function(t_list *stack_a, t_list *stack_b)
 	printf("\n****************************************\nstack b: \n");
 	while (back2 != NULL)
 	{
-		printf ("%d\n", back2->content);
+		printf ("%d   |     %d\n", back2->content, back2->index);
 		back2 = back2->next;
 	}
 	printf("\n*****************************************\nstack a: \n");
 	while (back1 != NULL)
 	{
-		printf ("%d\n", back1->content);
+		printf ("%d     |     %d\n", back1->content, back1->index);
 		back1 = back1->next;
 	}	
 }

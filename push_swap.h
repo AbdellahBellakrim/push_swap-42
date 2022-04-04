@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:50:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 15:50:34 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/04 22:49:17 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,17 @@ void		pa(t_list **stack_a, t_list **stack_b);
 void		print_function(t_list *stack_a, t_list *stack_b);	
 void		push_swap(t_args *args);
 void		sort_3(t_args *args);
-int		find_min(t_args *args);
+int			find_min(t_args *args);
 void		sort_4(t_args *args);
 void		sort_5(t_args *args);
+void		sort_hansdred(t_args *args);
+int			*list_to_tab(t_list *list, int len);
+void		index_stack(t_list *stack);
+void 		range(t_args *args);
+void		sort(t_args *args);
+int		find_max_index(t_list *stack, int max);
+
+// void bubbleSort(int *array, int n) ;
+// void swap_int(int *a, int *b) ;
 
 #endif
