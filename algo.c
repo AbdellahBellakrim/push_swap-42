@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 13:07:00 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/04 23:35:52 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/05 12:52:39 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	push_swap(t_args *args)
 		sort_4(args);
 	else if(args->list_len == 5)
 		sort_5(args);
-	else if(args->list_len > 5 && args->list_len <= 100) 
-		sort_hansdred(args);
+	else if(args->list_len > 5) 
+		sort_big_numbers(args);
 }
 //---------------------------------------------- sort 3
 void	sort_3(t_args *args)

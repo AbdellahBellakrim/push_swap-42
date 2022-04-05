@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:50:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/04 22:49:17 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/05 12:53:05 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void		sort_3(t_args *args);
 int			find_min(t_args *args);
 void		sort_4(t_args *args);
 void		sort_5(t_args *args);
-void		sort_hansdred(t_args *args);
+void		sort_big_numbers(t_args *args);
 int			*list_to_tab(t_list *list, int len);
 void		index_stack(t_list *stack);
 void 		range(t_args *args);

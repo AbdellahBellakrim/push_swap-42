@@ -6,13 +6,13 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 15:54:40 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/04 23:27:05 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/05 13:31:51 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_hansdred(t_args *args)
+void	sort_big_numbers(t_args *args)
 {
 	index_stack(args->stack_a);
 	range(args);
@@ -45,17 +45,22 @@ void	index_stack(t_list *stack)
 void range(t_args *args)
 {
 	int i;
+	int j;
 
-	i = 0;
-	while(args->stack_a)
+	i = 1;
+	if(args->list_len > 5 && args->list_len <= 250)
+		j = 15;
+	else if(args->list_len > 250)
+		j = 25;
+	while(ft_lstsize(args->stack_a) != 0)
 	{
-		if(args->stack_a->index <= i)
+		if(args->stack_a->index <= i && ft_lstsize(args->stack_b) > 1)
 		{
 			pb(&args->stack_a, &args->stack_b);
 			top_to_bottom(&args->stack_b, 'b');
 			i++;
 		}
-		else if(args->stack_a->index <= i + 15)
+		else if(args->stack_a->index <= i + j)
 		{
 			pb(&args->stack_a, &args->stack_b);
 			i++;
@@ -79,7 +84,7 @@ void	sort(t_args *args)
 
 	max = args->list_len - 1;
 	i = 0;
-	while(args->stack_b)
+	while(ft_lstsize(args->stack_b) != 0)
 	{
 		i = find_max_index(args->stack_b, max);
 		while(max > -1)
