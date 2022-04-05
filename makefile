@@ -6,7 +6,7 @@
 #    By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/10 14:50:05 by abellakr          #+#    #+#              #
-#    Updated: 2022/04/04 16:06:35 by abellakr         ###   ########.fr        #
+#    Updated: 2022/04/05 16:16:50 by abellakr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,24 +48,24 @@ endef
 
 export HEADER_PUSH_SWAP
 
-SRC = push_swap.c check_all.c utils1.c store_data.c parsing.c moves1.c \
-		moves2.c moves3.c moves4.c delet_utils.c  algo.c utils2.c big_nums.c 
+SRC = ./mandatory/push_swap.c ./mandatory/check_all.c ./mandatory/utils1.c ./mandatory/store_data.c ./mandatory/parsing.c ./mandatory/moves1.c \
+		./mandatory/moves2.c ./mandatory/moves3.c ./mandatory/moves4.c ./mandatory/delet_utils.c  ./mandatory/algo.c ./mandatory/utils2.c ./mandatory/big_nums.c 
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 %.o:%.c
-	@$(CC) $(CFLAGS) -c $<
+	@$(CC) $(CFLAGS) -c $^ -o $@
 $(NAME) : $(OBJ)
-	@echo " $${HEADER_PUSH_SWAP}"
+	@echo $(Red)" $${HEADER_PUSH_SWAP}"$(Color_Off)
 	@echo  $(BPurple)"								made by : heybellakrim"$(Color_Off)
-	@make -C ./libft
-	@make bonus -C ./libft
-	@$(CC) $(CFLAGS) $(OBJ)  ./libft/libft.a -o $(NAME)
+	@make -C ./mandatory/libft
+	@make bonus -C ./mandatory/libft
+	@$(CC) $(CFLAGS) $(OBJ)  ./mandatory/libft/libft.a -o $(NAME)
 re : fclean all
 clean :
-	@make clean -C ./libft
+	@make clean -C ./mandatory/libft
 	@rm -rf $(OBJ)
 fclean : clean
-	@make fclean -C ./libft
+	@make fclean -C ./mandatory/libft
 	@rm -rf $(NAME)
 .PHONY : clean fclean re
