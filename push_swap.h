@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:50:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/05 12:53:05 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/05 15:13:21 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,8 @@ void		sort_5(t_args *args);
 void		sort_big_numbers(t_args *args);
 int			*list_to_tab(t_list *list, int len);
 void		index_stack(t_list *stack);
-void 		range(t_args *args);
+void		range(t_args *args, int i, int j);
 void		sort(t_args *args);
-int		find_max_index(t_list *stack, int max);
-
-// void bubbleSort(int *array, int n) ;
-// void swap_int(int *a, int *b) ;
+int			find_max_index(t_list *stack, int max);
 
 #endif
