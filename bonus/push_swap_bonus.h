@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:19:44 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 16:18:41 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:07:58 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void		pa_bonus(t_list **stack_a, t_list **stack_b);
 //------------------------------------------------------ check output
 void		check_instructions(t_checker *args);
 int			check_stored_bonus(t_list *list);
-
-
+void		check(t_checker *args, char *line);
+void		error(char *line);
 #endif
