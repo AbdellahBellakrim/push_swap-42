@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:54:11 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 13:54:12 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:17:34 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	pb_bonus(t_list **stack_a, t_list **stack_b)
 	else
 		ft_lstadd_front(stack_b, *stack_a);
 	*stack_a = back1;
-	write(1, "pb\n", 3);
 }
 
 /*--------------------------------*/
@@ -53,5 +52,4 @@ void	pa_bonus(t_list **stack_a, t_list **stack_b)
 	else
 		ft_lstadd_front(stack_a, *stack_b);
 	*stack_b = back1;
-	write(1, "pa\n", 3);
 }

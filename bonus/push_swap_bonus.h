@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:19:44 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 14:46:22 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:18:41 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,23 @@ char		**parsing_args_bonus(int ac, char **av);
 int			check_digit_bonus(char **tab);
 void		check_repeat_bonus(t_list *list, t_checker *t);
 void		free_list_bonus(t_list *list);
+char		*ft_strdup2(char *s);
+char		*get_next_line(int fd);
 //------------------- swap functions
-void		swap_bonus(t_list **stack, char c);
+void		swap_bonus(t_list **stack);
 void		ss_bonus(t_list **stack_a, t_list **stack_b);
 //-------------------- rotaion from the top to bottom functions
-void		top_to_bottom_bonus(t_list **stack, char c);
+void		top_to_bottom_bonus(t_list **stack);
 void		rr_bonus(t_list **stack_a, t_list **stack_b);
 //---------------------------- rotation  from the bottom to top functions
-void		bottom_to_top_bonus(t_list **stack, char c);
+void		bottom_to_top_bonus(t_list **stack);
 void		rrr_bonus(t_list **stack_a, t_list **stack_b);
 // --------------------------------------------------- push functions
 void		pb_bonus(t_list **stack_a, t_list **stack_b);
 void		pa_bonus(t_list **stack_a, t_list **stack_b);
 //------------------------------------------------------ check output
-//----------------------------------------------------- check check_stored
+void		check_instructions(t_checker *args);
 int			check_stored_bonus(t_list *list);
-//------------------------------------------------------ check stack_b if empty
-// void	print_function(t_list *stack_a, t_list *stack_b);
+
 
 #endif

@@ -6,7 +6,7 @@
 #    By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/10 14:50:05 by abellakr          #+#    #+#              #
-#    Updated: 2022/04/06 14:26:16 by abellakr         ###   ########.fr        #
+#    Updated: 2022/04/06 15:40:33 by abellakr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,8 @@ export CHECKER_PUSH_SWAP
 SRC = ./mandatory/push_swap.c ./mandatory/check_all.c ./mandatory/utils1.c ./mandatory/store_data.c ./mandatory/parsing.c ./mandatory/moves1.c \
 		./mandatory/moves2.c ./mandatory/moves3.c ./mandatory/moves4.c  ./mandatory/algo.c ./mandatory/utils2.c ./mandatory/big_nums.c 
 OBJ = $(SRC:.c=.o)
-B_SRC = ./bonus/checker.c ./bonus/check_all_bonus.c ./bonus/moves1_bonus.c ./bonus/moves2_bonus.c ./bonus/moves3_bonus.c ./bonus/moves4_bonus.c ./bonus/parsing_bonus.c ./bonus/store_data_bonus.c ./bonus/utils1_bonus.c
+B_SRC = ./bonus/checker.c ./bonus/check_all_bonus.c ./bonus/moves1_bonus.c ./bonus/moves2_bonus.c ./bonus/moves3_bonus.c ./bonus/moves4_bonus.c \
+			./bonus/parsing_bonus.c ./bonus/store_data_bonus.c ./bonus/utils1_bonus.c ./bonus/utils2_bonus.c
 B_OBJ = $(B_SRC:.c=.o)
 
 all : $(NAME)
