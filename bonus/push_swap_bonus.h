@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:50:09 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 12:38:46 by abellakr         ###   ########.fr       */
+/*   Created: 2022/04/06 12:19:44 by abellakr          #+#    #+#             */
+/*   Updated: 2022/04/06 12:45:43 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-// ----------------------------------------
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
+//--------------------------------
 # include <libc.h>
 # include "../libft/libft.h"
-// ----------------------------------------
-typedef struct s_args
+//---------------------------------
+typedef struct checker
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
 	int		list_len;
-}t_args;
+}t_checker;
 // ---------------------------------------- utils
 t_list		*store_args(char **tab);
 int			ft_strcmp(char *s1, char *s2);
@@ -45,18 +45,7 @@ void		rrr(t_list **stack_a, t_list **stack_b);
 // --------------------------------------------------- push functions
 void		pb(t_list **stack_a, t_list **stack_b);
 void		pa(t_list **stack_a, t_list **stack_b);
-//---------------------------------  sorting algorithm
-void		print_function(t_list *stack_a, t_list *stack_b);	
-void		push_swap(t_args *args);
-void		sort_3(t_args *args);
-int			find_min(t_args *args);
-void		sort_4(t_args *args);
-void		sort_5(t_args *args);
-void		sort_big_numbers(t_args *args);
-int			*list_to_tab(t_list *list, int len);
-void		index_stack(t_list *stack);
-void		range(t_args *args, int i, int j);
-void		sort(t_args *args);
-int			find_max_index(t_list *stack, int max);
-
+//------------------------------------------------------ check output
+//----------------------------------------------------- check check_stored
+//------------------------------------------------------ check stack_b if empty
 #endif

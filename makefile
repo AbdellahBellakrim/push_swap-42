@@ -6,7 +6,7 @@
 #    By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/10 14:50:05 by abellakr          #+#    #+#              #
-#    Updated: 2022/04/05 16:16:50 by abellakr         ###   ########.fr        #
+#    Updated: 2022/04/06 12:39:36 by abellakr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,14 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 define HEADER_PUSH_SWAP 
+		-----------------------------------------------------------------------	
 		██████╗░██╗░░░██╗░██████╗██╗░░██╗░██████╗░██╗░░░░░░░██╗░█████╗░██████╗░
 		██╔══██╗██║░░░██║██╔════╝██║░░██║██╔════╝░██║░░██╗░░██║██╔══██╗██╔══██╗
 		██████╔╝██║░░░██║╚█████╗░███████║╚█████╗░░╚██╗████╗██╔╝███████║██████╔╝
 		██╔═══╝░██║░░░██║░╚═══██╗██╔══██║░╚═══██╗░░████╔═████║░██╔══██║██╔═══╝░
 		██║░░░░░╚██████╔╝██████╔╝██║░░██║██████╔╝░░╚██╔╝░╚██╔╝░██║░░██║██║░░░░░
 		╚═╝░░░░░░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░░░░
+		-----------------------------------------------------------------------
 endef
 
 export HEADER_PUSH_SWAP
@@ -58,14 +60,14 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@echo $(Red)" $${HEADER_PUSH_SWAP}"$(Color_Off)
 	@echo  $(BPurple)"								made by : heybellakrim"$(Color_Off)
-	@make -C ./mandatory/libft
-	@make bonus -C ./mandatory/libft
-	@$(CC) $(CFLAGS) $(OBJ)  ./mandatory/libft/libft.a -o $(NAME)
+	@make -C ./libft
+	@make bonus -C ./libft
+	@$(CC) $(CFLAGS) $(OBJ)  ./libft/libft.a -o $(NAME)
 re : fclean all
 clean :
-	@make clean -C ./mandatory/libft
+	@make clean -C ./libft
 	@rm -rf $(OBJ)
 fclean : clean
-	@make fclean -C ./mandatory/libft
+	@make fclean -C ./libft
 	@rm -rf $(NAME)
 .PHONY : clean fclean re
