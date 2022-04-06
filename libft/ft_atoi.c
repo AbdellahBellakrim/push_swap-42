@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:09:53 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/03 18:28:42 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 21:13:50 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	check_max(long long number, int signe)
 	number = number * signe;
 	if (number > INT_MAX || number < INT_MIN || len_n(number) > 11)
 	{
-		write(2, "error", 5);
+		write(2, "Error\n", 6);
 		exit(0);
 	}
 	return (number);
