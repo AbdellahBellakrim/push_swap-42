@@ -6,7 +6,7 @@
 #    By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/10 14:50:05 by abellakr          #+#    #+#              #
-#    Updated: 2022/04/06 12:39:36 by abellakr         ###   ########.fr        #
+#    Updated: 2022/04/06 14:26:16 by abellakr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ BCyan='\033[1;36m'        # Cyan
 BWhite='\033[1;37m'       # White
 
 NAME = push_swap
+NAME_BONUS = checker
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -50,9 +51,23 @@ endef
 
 export HEADER_PUSH_SWAP
 
+define CHECKER_PUSH_SWAP 
+		--------------------------------------------------------
+		░█████╗░██╗░░██╗███████╗░█████╗░██╗░░██╗███████╗██████╗░
+		██╔══██╗██║░░██║██╔════╝██╔══██╗██║░██╔╝██╔════╝██╔══██╗
+		██║░░╚═╝███████║█████╗░░██║░░╚═╝█████═╝░█████╗░░██████╔╝
+		██║░░██╗██╔══██║██╔══╝░░██║░░██╗██╔═██╗░██╔══╝░░██╔══██╗
+		╚█████╔╝██║░░██║███████╗╚█████╔╝██║░╚██╗███████╗██║░░██║
+		░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
+		--------------------------------------------------------
+endef
+
+export CHECKER_PUSH_SWAP
 SRC = ./mandatory/push_swap.c ./mandatory/check_all.c ./mandatory/utils1.c ./mandatory/store_data.c ./mandatory/parsing.c ./mandatory/moves1.c \
-		./mandatory/moves2.c ./mandatory/moves3.c ./mandatory/moves4.c ./mandatory/delet_utils.c  ./mandatory/algo.c ./mandatory/utils2.c ./mandatory/big_nums.c 
+		./mandatory/moves2.c ./mandatory/moves3.c ./mandatory/moves4.c  ./mandatory/algo.c ./mandatory/utils2.c ./mandatory/big_nums.c 
 OBJ = $(SRC:.c=.o)
+B_SRC = ./bonus/checker.c ./bonus/check_all_bonus.c ./bonus/moves1_bonus.c ./bonus/moves2_bonus.c ./bonus/moves3_bonus.c ./bonus/moves4_bonus.c ./bonus/parsing_bonus.c ./bonus/store_data_bonus.c ./bonus/utils1_bonus.c
+B_OBJ = $(B_SRC:.c=.o)
 
 all : $(NAME)
 %.o:%.c
@@ -63,11 +78,19 @@ $(NAME) : $(OBJ)
 	@make -C ./libft
 	@make bonus -C ./libft
 	@$(CC) $(CFLAGS) $(OBJ)  ./libft/libft.a -o $(NAME)
+bonus : $(B_OBJ)
+	@echo $(Green)" $${CHECKER_PUSH_SWAP}"$(Color_Off)
+	@echo  $(BPurple)"						made by : heybellakrim"$(Color_Off)
+	@make -C ./libft
+	@make bonus -C ./libft
+	@$(CC) $(CFLAGS) $(B_OBJ)  ./libft/libft.a -o $(NAME_BONUS)
 re : fclean all
 clean :
 	@make clean -C ./libft
-	@rm -rf $(OBJ)
+	@rm -f $(OBJ)
+	@rm -f $(B_OBJ)
 fclean : clean
 	@make fclean -C ./libft
-	@rm -rf $(NAME)
-.PHONY : clean fclean re
+	@rm -f $(NAME)
+	@rm -f $(NAME_BONUS)
+.PHONY : clean fclean bonus

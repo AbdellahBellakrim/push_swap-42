@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:19:01 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 12:42:01 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 14:46:18 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,26 @@ int	main(int ac, char **av)
 		exit(1);
 	args.stack_a = NULL;
 	args.stack_b = NULL;
-	review_args(ac, av, &args);
-	// if (check_stored(args.stack_a))
-	// {
-	// 	free_list(args.stack_a);
-	// 	exit(0);
-	// }
-	// else
-	// 	push_swap(&args);
+	review_args_bonus(ac, av, &args);
 }
+// /--------------------------------------------------------
+// void	print_function(t_list *stack_a, t_list *stack_b)
+// {
+// 	t_list	*back1;
+// 	t_list	*back2;
+
+// 	back1 = stack_a;
+// 	back2 = stack_b;
+// 	printf("\n****************************************\nstack b: \n");
+// 	while (back2 != NULL)
+// 	{
+// 		printf ("%d\n", back2->content);
+// 		back2 = back2->next;
+// 	}
+// 	printf("\n*****************************************\nstack a: \n");
+// 	while (back1 != NULL)
+// 	{
+// 		printf ("%d\n", back1->content);
+// 		back1 = back1->next;
+// 	}	
+// }

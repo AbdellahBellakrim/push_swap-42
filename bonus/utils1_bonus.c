@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils1.c                                           :+:      :+:    :+:   */
+/*   utils1_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/12 17:43:13 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 13:48:44 by abellakr         ###   ########.fr       */
+/*   Created: 2022/04/06 13:54:32 by abellakr          #+#    #+#             */
+/*   Updated: 2022/04/06 13:54:33 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+
+
+#include "push_swap_bonus.h"
 
 // ----------------------------------- strcmp two strings
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp_bonus(char *s1, char *s2)
 {
 	int	i;
 
@@ -29,7 +31,7 @@ int	ft_strcmp(char *s1, char *s2)
 }
 
 // ----------------------------------- trim a char from a string
-char	*ft_triz(char *s, char c)
+char	*ft_triz_bonus(char *s, char c)
 {
 	unsigned long	i;
 	unsigned long	j;
@@ -59,7 +61,7 @@ char	*ft_triz(char *s, char c)
 }
 
 // ----------------------------------- check if stack already stored
-int	check_stored(t_list *list)
+int	check_stored_bonus(t_list *list)
 {
 	t_list	*back;
 
