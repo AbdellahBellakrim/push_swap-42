@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 01:39:49 by abellakr          #+#    #+#             */
-/*   Updated: 2022/03/28 18:04:28 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 19:35:59 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	check_repeat(t_list *list, t_args *t)
 		{
 			if (back1->content == back2->next->content)
 			{
-				write (2, "error", 5);
+				write (2, "Error\n", 6);
 				free_list(list);
 				exit(1);
 			}

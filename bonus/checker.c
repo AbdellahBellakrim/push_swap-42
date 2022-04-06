@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:19:01 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 17:56:49 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:42:13 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int ac, char **av)
 	t_checker	args;
 
 	if (ac == 1)
-		exit(1);
+		exit(0);
 	args.stack_a = NULL;
 	args.stack_b = NULL;
 	review_args_bonus(ac, av, &args);

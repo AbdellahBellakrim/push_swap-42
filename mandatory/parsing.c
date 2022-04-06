@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:21:05 by abellakr          #+#    #+#             */
-/*   Updated: 2022/03/24 19:11:33 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 19:36:22 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ void	review_args(int ac, char **av, t_args *t)
 	tab = parsing_args(ac, av);
 	if (!tab || !*tab)
 	{
-		write(2, "error", 5);
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 	if (check_digit(tab) == 0)
 	{
-		write(2, "error", 5);
+		write(2, "Error\n", 6);
 		free_function(tab);
 		exit(1);
 	}
