@@ -6,36 +6,38 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:53:56 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 16:20:36 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:48:46 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
 /*--------------------------------*/
-void	top_to_bottom_bonus(t_list **stack)
+int	top_to_bottom_bonus(t_list **stack)
 {
 	t_list	*first_node;
 	t_list	*second_node;
 	t_list	*last_node;
 
 	if ((*stack)->next == NULL)
-		exit(1);
+		return (0);
 	first_node = *stack;
 	second_node = first_node->next;
 	last_node = ft_lstlast(*stack);
 	last_node->next = first_node;
 	first_node->next = NULL;
 	*stack = second_node;
+	return (1);
 }
 
 /*--------------------------------*/ //rr
-void	rr_bonus(t_list **stack_a, t_list **stack_b)
+int	rr_bonus(t_list **stack_a, t_list **stack_b)
 {
 	if ((*stack_a)->next == NULL || (*stack_b)->next == NULL)
-		exit(1);
+		return (0);
 	top_to_bottom_bonus(stack_a);
 	top_to_bottom_bonus(stack_b);
+	return (1);
 }
 
 // knt hna 

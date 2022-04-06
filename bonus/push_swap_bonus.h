@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:19:44 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 17:07:58 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:47:45 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ void		free_list_bonus(t_list *list);
 char		*ft_strdup2(char *s);
 char		*get_next_line(int fd);
 //------------------- swap functions
-void		swap_bonus(t_list **stack);
-void		ss_bonus(t_list **stack_a, t_list **stack_b);
+int			swap_bonus(t_list **stack);
+int			ss_bonus(t_list **stack_a, t_list **stack_b);
 //-------------------- rotaion from the top to bottom functions
-void		top_to_bottom_bonus(t_list **stack);
-void		rr_bonus(t_list **stack_a, t_list **stack_b);
+int			top_to_bottom_bonus(t_list **stack);
+int			rr_bonus(t_list **stack_a, t_list **stack_b);
 //---------------------------- rotation  from the bottom to top functions
-void		bottom_to_top_bonus(t_list **stack);
-void		rrr_bonus(t_list **stack_a, t_list **stack_b);
+int			bottom_to_top_bonus(t_list **stack);
+int			rrr_bonus(t_list **stack_a, t_list **stack_b);
 // --------------------------------------------------- push functions
-void		pb_bonus(t_list **stack_a, t_list **stack_b);
-void		pa_bonus(t_list **stack_a, t_list **stack_b);
+int			pb_bonus(t_list **stack_a, t_list **stack_b);
+int			pa_bonus(t_list **stack_a, t_list **stack_b);
 //------------------------------------------------------ check output
 void		check_instructions(t_checker *args);
 int			check_stored_bonus(t_list *list);

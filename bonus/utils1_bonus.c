@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:54:32 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 17:09:52 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:58:03 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int	check_stored_bonus(t_list *list)
 	t_list	*back;
 
 	back = list;
+	if (!list)
+		return (0);
 	while (back->next)
 	{
 		if (back->content > back->next->content)

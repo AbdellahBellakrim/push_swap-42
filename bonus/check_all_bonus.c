@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:53:41 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 17:08:10 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:42:02 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,4 @@ void	check_repeat_bonus(t_list *list, t_checker *t)
 		back1 = back1->next;
 	}
 	t->list_len = ft_lstsize(list);
-	if (t->list_len == 1)
-	{
-		free_list_bonus(list);
-		exit(1);
-	}
 }
