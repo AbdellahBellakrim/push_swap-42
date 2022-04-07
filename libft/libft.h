@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:30:24 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/04 15:56:32 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/07 21:18:22 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 //atoi func
-int		ft_atoi(const char *str);
+int		ft_atoi(char *str);
+char	*ft_trizo(char *s, char c);
 //calloc
 void	*ft_calloc(size_t count, size_t size);
 //addional functions
