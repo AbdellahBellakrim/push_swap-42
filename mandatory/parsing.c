@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:21:05 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 19:36:22 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/07 17:00:32 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**parsing_args(int ac, char **av)
 	char	**args;
 	int		index;
 
-	tab = ft_strdup(av[1]);
+	tab = ft_strtrim(av[1], " ");
 	if (!tab)
 		return (NULL);
 	str1 = ft_strjoin(tab, " ");

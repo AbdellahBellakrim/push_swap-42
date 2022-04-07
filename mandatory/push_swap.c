@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:49:54 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 16:24:48 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/07 16:58:58 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ int	main(int ac, char **av)
 	}
 	else
 		push_swap(&args);
+	free_list(args.stack_a);
+	free_list(args.stack_b);
 }
