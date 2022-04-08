@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:55:07 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/08 00:34:11 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:53:23 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ void	bottom_to_top(t_list **stack, char c)
 /*--------------------------------*/
 void	rrr(t_list **stack_a, t_list **stack_b)
 {
-	if ((*stack_a)->next == NULL || (*stack_b)->next == NULL)
-		exit(1);
 	bottom_to_top(stack_a, 'r');
 	bottom_to_top(stack_b, 'r');
 	write(1, "rrr\n", 4);

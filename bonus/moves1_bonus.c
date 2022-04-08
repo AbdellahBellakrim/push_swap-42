@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:53:50 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/08 00:33:20 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:52:49 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int	swap_bonus(t_list **stack)
 /*--------------------------------*/ //ss
 int	ss_bonus(t_list **stack_a, t_list **stack_b)
 {
-	if ((*stack_b)->next == NULL || (*stack_a)->next == NULL)
-		return (0);
 	swap_bonus(stack_a);
 	swap_bonus(stack_b);
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:54:06 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/08 00:29:34 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:52:55 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ int	bottom_to_top_bonus(t_list **stack)
 /*--------------------------------*/
 int	rrr_bonus(t_list **stack_a, t_list **stack_b)
 {
-	if ((*stack_a)->next == NULL || (*stack_b)->next == NULL)
-		return (0);
 	bottom_to_top_bonus(stack_a);
 	bottom_to_top_bonus(stack_b);
 	return (1);
