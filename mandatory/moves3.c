@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:55:07 by abellakr          #+#    #+#             */
-/*   Updated: 2022/03/26 19:35:19 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:34:11 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	bottom_to_top(t_list **stack, char c)
 	t_list	*back1;
 	t_list	*back2;
 
-	if ((*stack)->next == NULL)
+	if (ft_lstsize((*stack)) == 0 || (*stack)->next == NULL)
 		exit(1);
 	back1 = *stack;
 	back2 = *stack;

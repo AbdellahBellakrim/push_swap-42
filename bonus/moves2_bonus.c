@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:53:56 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 17:48:46 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:32:38 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	top_to_bottom_bonus(t_list **stack)
 	t_list	*second_node;
 	t_list	*last_node;
 
-	if ((*stack)->next == NULL)
+	if (ft_lstsize((*stack)) == 0 || (*stack)->next == NULL)
 		return (0);
 	first_node = *stack;
 	second_node = first_node->next;

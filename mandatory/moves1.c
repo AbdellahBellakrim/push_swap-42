@@ -6,7 +6,7 @@
 /*   By: abellakr <abellakr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 20:21:04 by abellakr          #+#    #+#             */
-/*   Updated: 2022/04/06 15:43:53 by abellakr         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:33:51 by abellakr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	swap(t_list **stack, char c)
 	t_list	*second_node;
 	t_list	*third_node;
 
-	if ((*stack)->next == NULL)
+	if (ft_lstsize((*stack)) == 0 || (*stack)->next == NULL)
 		exit(1);
 	first_node = *stack;
 	second_node = first_node->next;
